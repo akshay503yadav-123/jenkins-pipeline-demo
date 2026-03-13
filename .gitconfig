@@ -1,0 +1,5 @@
+[safe]
+	directory = /var/lib/jenkins/workspace/pipeline-demo
+[user]
+	name = " akshay503yadav-123 "
+	email = akshay503yadav@gmail.com
