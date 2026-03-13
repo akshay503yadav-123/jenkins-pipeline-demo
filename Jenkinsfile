@@ -2,22 +2,24 @@ pipeline {
     agent any
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/akshay503yadav-123/jenkins-pipeline-demo.git'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo "Building Application"
             }
         }
 
-        stage('Test') {
+        stage('Deploy') {
             steps {
-                echo "Testing Application"
+                sh 'sudo cp index.html /usr/share/nginx/html/'
             }
         }
 
-        stage('Deploy') {
-            steps {
-                echo "Deploying Application"
-            }
-        }
     }
 }
